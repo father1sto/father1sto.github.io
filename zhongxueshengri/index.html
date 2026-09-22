@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="中学生日记网提供精选的中学生优秀日记范文、写作技巧指导、分类素材积累及写作心得分享，帮助学生提升写作水平，记录成长点滴。">
+    <meta name="keywords" content="中学生日记,初中生作文,日记写作技巧,优秀日记范文,成长记录">
+    <title>中学生日记-优秀范文、写作技巧与成长记录平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5f7fa;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --border-color: #e1e4e8;
+            --accent-color: #ff9800;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #ffffff;
+            background-image: radial-gradient(#f0f2f5 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 8px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            outline: none;
+            font-size: 14px;
+            width: 200px;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+            width: 240px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(74, 144, 226, 0.1);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+
+        /* Main Grid */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* Article List */
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .more-link {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .more-link:hover {
+            color: var(--primary-color);
+        }
+
+        .diary-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .diary-card:hover {
+            box-shadow: var(--card-shadow);
+            transform: translateY(-2px);
+            border-color: var(--primary-color);
+        }
+
+        .card-meta {
+            font-size: 13px;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+
+        .card-excerpt {
+            color: var(--text-gray);
+            font-size: 15px;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .author {
+            font-size: 13px;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .author-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+
+        .read-btn {
+            font-size: 13px;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .widget {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .widget h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .category-list li {
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+
+        .category-list a {
+            display: block;
+            padding: 10px 0;
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .category-list a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .category-list span {
+            float: right;
+            background: #f0f2f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .tips-box {
+            background-color: #fff8e1;
+            border-left: 3px solid #ffc107;
+            padding: 15px;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Grid Gallery */
+        .gallery-section {
+            margin-bottom: 60px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background-color: #eee;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 15px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <span>📝</span> 中学生日记
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">优秀范文</a></li>
+                <li><a href="#">写作技巧</a></li>
+                <li><a href="#">分类素材</a></li>
+                <li><a href="#">成长记录</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索日记范文...">
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>记录青春，笔尖生花</h1>
+        <p>这里汇集了中学生优秀的日记范文与写作指导，助你捕捉生活中的点滴感动，提升文字表达能力，让每一次记录都成为成长的见证。</p>
+        <div class="hero-tags">
+            <span class="tag">写人记事</span>
+            <span class="tag">写景状物</span>
+            <span class="tag">感悟抒情</span>
+            <span class="tag">读书笔记</span>
+            <span class="tag">社会实践</span>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <!-- Left Column: Articles -->
+        <div class="content-column">
+            <section class="latest-articles">
+                <div class="section-title">
+                    <span>最新日记精选</span>
+                    <a href="#" class="more-link">查看更多 &gt;</a>
+                </div>
+
+                <article class="diary-card">
+                    <div class="card-meta">
+                        <span>📅 2023年10月24日</span>
+                        <span>🏷️ 初二日记</span>
+                        <span>👁️ 1,240 阅读</span>
+                    </div>
+                    <h2 class="card-title"><a href="#">秋日清晨的公园漫步</a></h2>
+                    <p class="card-excerpt">
+                        清晨的阳光透过稀疏的树叶洒在地面上，空气中弥漫着淡淡的泥土芬芳。今天清晨我起得很早，独自去公园散步，感受着秋天独有的宁静与美好。金黄的银杏叶在微风中摇曳，仿佛在诉说着季节的更替...
+                    </p>
+                    <div class="card-footer">
+                        <div class="author">
+                            <div class="author-avatar"></div>
+                            <span>作者：李明</span>
+                        </div>
+                        <a href="#" class="read-btn">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="diary-card">
+                    <div class="card-meta">
+                        <span>📅 2023年10月23日</span>
+                        <span>🏷️ 初三日记</span>
+                        <span>👁️ 856 阅读</span>
+                    </div>
+                    <h2 class="card-title"><a href="#">一次难忘的数学考试</a></h2>
+                    <p class="card-excerpt">
+                        今天下午进行了期中数学考试，拿到试卷的那一刻，我的心跳不由得加速了。试卷上的题目看起来并不难，但真正做起来却处处碰壁。特别是最后一道大题，我思考了很久，最后还是空着交了上去...
+                    </p>
+                    <div class="card-footer">
+                        <div class="author">
+                            <div class="author-avatar"></div>
+                            <span>作者：张伟</span>
+                        </div>
+                        <a href="#" class="read-btn">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="diary-card">
+                    <div class="card-meta">
+                        <span>📅 2023年10月22日</span>
+                        <span>🏷️ 初一日记</span>
+                        <span>👁️ 2,100 阅读</span>
+                    </div>
+                    <h2 class="card-title"><a href="#">第一次尝试做红烧肉</a></h2>
+                    <p class="card-excerpt">
+                        周末在家，看着妈妈忙碌的背影，我决定亲自下厨，为家人做一道红烧肉。虽然过程有些手忙脚乱，油星溅到了手上也有些疼，但当我端出那盘色泽红亮、香气扑鼻的红烧肉时，心里充满了成就感...
+                    </p>
+                    <div class="card-footer">
+                        <div class="author">
+                            <div class="author-avatar"></div>
+                            <span>作者：王芳</span>
+                        </div>
+                        <a href="#" class="read-btn">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="diary-card">
+                    <div class="card-meta">
+                        <span>📅 2023年10月21日</span>
+                        <span>🏷️ 读书笔记</span>
+                        <span>👁️ 650 阅读</span>
+                    </div>
+                    <h2 class="card-title"><a href="#">读《鲁滨逊漂流记》有感</a></h2>
+                    <p class="card-excerpt">
+                        最近我读了笛福的《鲁滨逊漂流记》，书中鲁滨逊在荒岛上的经历让我深受震撼。面对绝境，他没有放弃希望，而是用双手创造生活，这种坚韧不拔的精神深深地打动了我。在学习和生活中，我们也应该学习这种精神...
+                    </p>
+                    <div class="card-footer">
+                        <div class="author">
+                            <div class="author-avatar"></div>
+                            <span>作者：陈静</span>
+                        </div>
+                        <a href="#" class="read-btn">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>日记分类</h3>
+                <ul class="category-list">
+                    <li><a href="#">写人记事 <span>120</span></a></li>
+                    <li><a href="#">写景状物 <span>85</span></a></li>
+                    <li><a href="#">感悟抒情 <span>64</span></a></li>
+                    <li><a href="#">读书笔记 <span>42</span></a></li>
+                    <li><a href="#">社会实践 <span>30</span></a></li>
+                    <li><a href="#">校园生活 <span>95</span></a></li>
+                    <li><a href="#">家庭琐事 <span>50</span></a></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h3>写作技巧</h3>
+                <div class="tips-box">
+                    <p><strong>💡 如何写好日记？</strong></p>
+                    <p>日记是记录生活的一种方式，关键在于“真”与“深”。不要为了写作而写作，要用心观察生活中的细节，将真实的情感融入文字之中。</p>
+                </div>
+            </div>
+
+            <div class="widget">
+                <h3>热门标签</h3>
+                <div class="hero-tags" style="justify-content: flex-start;">
+                    <span class="tag">秋游</span>
+                    <span class="tag">亲情</span>
+                    <span class="tag">挫折</span>
+                    <span class="tag">梦想</span>
+                    <span class="tag">校园</span>
+                    <span class="tag">环保</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="section-title">
+            <span>精选图集：生活中的美好瞬间</span>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/school1/300/400" alt="校园一角">
+                <div class="gallery-overlay">校园一角</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/book2/300/400" alt="阅读时光">
+                <div class="gallery-overlay">阅读时光</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/nature3/300/400" alt="自然风光">
+                <div class="gallery-overlay">自然风光</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/family4/300/400" alt="家庭聚餐">
+                <div class="gallery-overlay">家庭聚餐</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-title">
+            <span>常见问题解答</span>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">中学生写日记有什么好处？</div>
+                <div class="faq-answer">
+                    写日记可以帮助学生养成良好的观察习惯，锻炼逻辑思维和语言表达能力。同时，它也是记录个人成长、宣泄情绪和积累写作素材的重要途径。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">日记的字数要求是多少？</div>
+                <div class="faq-answer">
+                    中学生日记的字数一般没有严格限制，通常根据写作内容而定。初学者可以从简短的记录开始，随着观察力和表达能力的提升，逐渐增加篇幅，做到言之有物即可。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">日记和作文有什么区别？</div>
+                <div class="faq-answer">
+                    日记通常是私人的、随意的，记录的是当天发生的真实事情或瞬间的想法；而作文则是为了表达某种主题而经过构思和加工的文章，往往具有更强的目的性和规范性。
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="font-size: 14px; line-height: 1.8;">中学生日记网致力于为初中生提供优质的日记范文、写作指导和素材积累平台。我们相信，每一篇日记都是成长的足迹。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">优秀范文</a></li>
+                    <li><a href="#">写作技巧</a></li>
+                    <li><a href="#">分类素材</a></li>
+                    <li><a href="#">投稿指南</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>友情链接</h4>
+                <ul>
+                    <li><a href="#">中小学教育网</a></li>
+                    <li><a href="#">作文大全</a></li>
+                    <li><a href="#">语文学习网</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 中学生日记网 版权所有 | 仅供学习交流使用</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Simple FAQ Interaction
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+  </html>
