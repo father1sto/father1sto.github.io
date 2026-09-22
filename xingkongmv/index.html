@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星空MV-高清4K宇宙视觉艺术与创意视频素材库</title>
+    <meta name="description" content="星空MV专题网站，提供海量高清宇宙、星云、流星、银河主题的创意视频素材与背景音乐资源，适用于影视制作、广告配乐及个人创作。">
+    <meta name="keywords" content="星空MV, 宇宙视频, 星云素材, 银河背景, 4K视频, 视频素材库">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-deep: #05070a;
+            --bg-card: #0f1219;
+            --bg-card-hover: #161b26;
+            --accent-primary: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.4);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #1f2937;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --nav-height: 70px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Header */
+        header {
+            height: var(--nav-height);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(5, 7, 10, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-primary);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: #fff;
+        }
+
+        .btn-glow {
+            background: linear-gradient(135deg, var(--accent-primary), #4f46e5);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 0 20px var(--accent-glow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px var(--accent-glow);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 90vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            margin-top: var(--nav-height);
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            z-index: -2;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://picsum.photos/seed/stars/1920/1080') no-repeat center center/cover;
+            opacity: 0.2;
+            z-index: -1;
+            filter: blur(8px);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .search-box {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 6px;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-box input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 12px 24px;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-box button {
+            background: #fff;
+            color: #000;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #e5e7eb;
+        }
+
+        /* Categories */
+        .categories {
+            padding: 80px 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .cat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+            background: var(--bg-card-hover);
+        }
+
+        .cat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .cat-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .cat-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Featured MV Section */
+        .featured {
+            padding: 80px 0;
+            background: linear-gradient(180deg, var(--bg-deep) 0%, #0b0d12 100%);
+        }
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .mv-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .mv-card:hover {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .mv-thumb {
+            width: 100%;
+            height: 200px;
+            background-color: #1a1d26;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mv-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .mv-card:hover .mv-thumb img {
+            transform: scale(1.05);
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mv-card:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-btn {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #fff;
+        }
+
+        .play-btn::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 18px solid #fff;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            margin-left: 4px;
+        }
+
+        .mv-info {
+            padding: 20px;
+        }
+
+        .mv-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .mv-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .tag {
+            background: rgba(99, 102, 241, 0.15);
+            color: #818cf8;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-primary);
+            flex-shrink: 0;
+        }
+
+        .feature-text h3 {
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .feature-text p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background: #0b0d12;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-card);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-primary);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border-color);
+            background: #05070a;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            margin-top: 16px;
+            max-width: 300px;
+            font-size: 0.9rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            nav {
+                display: none;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>✦</span> 星空MV
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">分类浏览</a></li>
+                    <li><a href="#">高清素材</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-glow">立即搜索</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>探索浩瀚宇宙的<br>视觉与听觉盛宴</h1>
+                <p>汇聚全球顶级摄影师与创作者的星空MV素材，为您的影视作品、广告配乐及个人创作提供极致的视觉灵感。</p>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索星云、流星、银河、4K视频...">
+                    <button>搜索</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories container">
+            <h2 class="section-title">热门分类</h2>
+            <p class="section-subtitle">按场景与风格快速定位您需要的视觉素材</p>
+            <div class="category-grid">
+                <div class="cat-card">
+                    <span class="cat-icon">🌌</span>
+                    <h3 class="cat-title">银河系全景</h3>
+                    <p class="cat-desc">震撼的银河视角与星系纹理</p>
+                </div>
+                <div class="cat-card">
+                    <span class="cat-icon">☄️</span>
+                    <h3 class="cat-title">流星与陨石</h3>
+                    <p class="cat-desc">捕捉天体划过夜空的瞬间</p>
+                </div>
+                <div class="cat-card">
+                    <span class="cat-icon">🔭</span>
+                    <h3 class="cat-title">深空望远镜</h3>
+                    <p class="cat-desc">专业天文摄影与星云特写</p>
+                </div>
+                <div class="cat-card">
+                    <span class="cat-icon">🎵</span>
+                    <h3 class="cat-title">电子氛围</h3>
+                    <p class="cat-desc">配合星空主题的背景音乐</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured MVs -->
+        <section class="featured">
+            <div class="container">
+                <h2 class="section-title">精选星空MV</h2>
+                <p class="section-subtitle">本周最受欢迎的高清视觉创意作品</p>
+                
+                <div class="mv-grid">
+                    <!-- MV Card 1 -->
+                    <article class="mv-card">
+                        <div class="mv-thumb">
+                            <img src="https://picsum.photos/seed/nebula1/600/400" alt="星云特写视频封面">
+                            <div class="play-overlay">
+                                <div class="play-btn"></div>
+                            </div>
+                        </div>
+                        <div class="mv-info">
+                            <h3 class="mv-title">深空之眼 - 蓝色星云延时摄影</h3>
+                            <div class="mv-meta">
+                                <span class="tag">4K 60fps</span>
+                                <span>时长: 0:45</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- MV Card 2 -->
+                    <article class="mv-card">
+                        <div class="mv-thumb">
+                            <img src="https://picsum.photos/seed/galaxy2/600/400" alt="银河拱桥视频封面">
+                            <div class="play-overlay">
+                                <div class="play-btn"></div>
+                            </div>
+                        </div>
+                        <div class="mv-info">
+                            <h3 class="mv-title">银河拱桥 - 夜空全景素材</h3>
+                            <div class="mv-meta">
+                                <span class="tag">超高清</span>
+                                <span>时长: 1:20</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- MV Card 3 -->
+                    <article class="mv-card">
+                        <div class="mv-thumb">
+                            <img src="https://picsum.photos/seed/earth3/600/400" alt="地球星空视频封面">
+                            <div class="play-overlay">
+                                <div class="play-btn"></div>
+                            </div>
+                        </div>
+                        <div class="mv-info">
+                            <h3 class="mv-title">地球与星空 - 航拍延时</h3>
+                            <div class="mv-meta">
+                                <span class="tag">8K</span>
+                                <span>时长: 2:15</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- MV Card 4 -->
+                    <article class="mv-card">
+                        <div class="mv-thumb">
+                            <img src="https://picsum.photos/seed/meteor4/600/400" alt="流星雨视频封面">
+                            <div class="play-overlay">
+                                <div class="play-btn"></div>
+                            </div>
+                        </div>
+                        <div class="mv-info">
+                            <h3 class="mv-title">英仙座流星雨 - 夜空实录</h3>
+                            <div class="mv-meta">
+                                <span class="tag">HDR</span>
+                                <span>时长: 0:30</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- MV Card 5 -->
+                    <article class="mv-card">
+                        <div class="mv-thumb">
+                            <img src="https://picsum.photos/seed/blackhole5/600/400" alt="黑洞与星空视频封面">
+                            <div class="play-overlay">
+                                <div class="play-btn"></div>
+                            </div>
+                        </div>
+                        <div class="mv-info">
+                            <h3 class="mv-title">星际穿越 - 黑洞视界模拟</h3>
+                            <div class="mv-meta">
+                                <span class="tag">3D动画</span>
+                                <span>时长: 0:55</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- MV Card 6 -->
+                    <article class="mv-card">
+                        <div class="mv-thumb">
+                            <img src="https://picsum.photos/seed/stars6/600/400" alt="繁星点点视频封面">
+                            <div class="play-overlay">
+                                <div class="play-btn"></div>
+                            </div>
+                        </div>
+                        <div class="mv-info">
+                            <h3 class="mv-title">静谧星空 - 纯净背景素材</h3>
+                            <div class="mv-meta">
+                                <span class="tag">无水印</span>
+                                <span>时长: 10:00</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features container">
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+                    </div>
+                    <div class="feature-text">
+                        <h3>超高清画质</h3>
+                        <p>提供4K、8K及HDR格式，确保画面细节极致还原，满足专业影视制作需求。</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <div class="feature-text">
+                        <h3>极速下载</h3>
+                        <p>分布式CDN加速，保障素材秒级上传下载，不卡顿、不丢失。</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="feature-text">
+                        <h3>商用授权</h3>
+                        <p>所有素材均包含标准商业授权，支持个人与企业项目使用，无隐形费用。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq">
+            <div class="container faq-container">
+                <h2 class="section-title">常见问题</h2>
+                <div class="faq-item">
+                    <div class="faq-question">这些星空MV素材可以用于商业广告吗？</div>
+                    <div class="faq-answer">是的，本站所有素材均包含标准商业授权，您可以放心用于企业宣传、广告投放及商业视频制作。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">支持哪些视频格式？</div>
+                    <div class="faq-answer">我们主要提供MP4格式，兼容绝大多数播放器及剪辑软件，同时提供ProRes等工程格式供专业用户选择。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何获得高清下载链接？</div>
+                    <div class="faq-answer">注册会员后，您可以在个人中心查看所有已购买素材的下载链接，支持多设备下载。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo"><span>✦</span> 星空MV</a>
+                    <p>致力于为创作者提供最纯粹、最震撼的宇宙视觉素材，让灵感在星空中自由飞翔。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>探索</h4>
+                    <ul>
+                        <li><a href="#">最新上传</a></li>
+                        <li><a href="#">热门榜单</a></li>
+                        <li><a href="#">分类浏览</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源</h4>
+                    <ul>
+                        <li><a href="#">免费素材</a></li>
+                        <li><a href="#">4K专区</a></li>
+                        <li><a href="#">AE模板</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持</h4>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">版权说明</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 星空MV素材库 版权所有. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ interaction
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentNode;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+                              </html>
